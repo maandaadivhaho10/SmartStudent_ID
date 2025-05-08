@@ -1,10 +1,15 @@
-// src/pages/Dashboard.jsx
 import React, { useState } from 'react';
-import StudentIDForm from './StudentIDForm'; // or adjust to correct path
+import StudentIDForm from './StudentIDForm';
+import CheckStatusPage from './CheckStatusPage';
+import NotificationsPage from './NotificationsPage';
+import HelpPage from './HelpPage';
+import LogoutPage from './LogoutPage';
+import { Link } from 'react-router-dom';
 import './Dashboard.css';
 
 const Dashboard = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [activePage, setActivePage] = useState('home');
 
   return (
     <div className="dashboard-container">
@@ -15,17 +20,28 @@ const Dashboard = () => {
       <aside className={`sidebar ${menuOpen ? 'open' : ''}`}>
         <h2 className="sidebar-title">Menu</h2>
         <nav className="sidebar-nav">
-          <a href="#">check Status</a>
-          <a href="#">Notifcations</a>
-          <a href="#">Settings</a>
-          <a href="#">Log Out</a>
+          {/* Updated Link to navigate directly to home */}
+          <Link to="#" onClick={() => setActivePage('home')}>Dashboard</Link>
+          <Link to="#" onClick={() => setActivePage('checkStatus')}>Check Status</Link>
+          <Link to="#" onClick={() => setActivePage('notifications')}>Notifications</Link>
+          <Link to="#" onClick={() => setActivePage('settings')}>Help & Support</Link>
+          <Link to="#" onClick={() => setActivePage('logout')}>Log Out</Link>
         </nav>
       </aside>
 
       <main className="dashboard-main">
-        <h1>Hello Maanda Adivhaho</h1>
-        <p>Welcome to the SmartStudentID. Use the menu to navigate.</p>
-        <StudentIDForm />  {/* Directly add the StudentIDForm component here */}
+        {activePage === 'home' && (
+          <>
+            <h1>Hello Maanda Adivhaho</h1>
+            <p>Welcome to the SmartStudentID. Use the menu to navigate.</p>
+            <StudentIDForm />
+          </>
+        )}
+
+        {activePage === 'checkStatus' && <CheckStatusPage />}
+        {activePage === 'notifications' && <NotificationsPage/> }
+        {activePage === 'settings' && <HelpPage/>}
+        {activePage === 'logout' && <LogoutPage/>}
       </main>
     </div>
   );

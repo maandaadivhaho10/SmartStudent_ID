@@ -1,0 +1,29 @@
+/* src/LogoutPage.css */
+.logout-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f7f9fc;
+  }
+  
+  .logout-card {
+    text-align: center;
+    padding: 2.5rem;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+  }
+  
+  .logout-card h2 {
+    color: #e74c3c;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .logout-card p {
+    color: #333;
+    font-size: 1rem;
+  }
+  

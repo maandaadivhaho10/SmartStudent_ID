@@ -21,25 +21,28 @@ function SignUp() {
     <div className="signup-container">
       <h1 className="signup-title">Sign Up</h1>
       <form onSubmit={handleSignUp} className="signup-form">
-        <label>Email:</label>
+    
         <input
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          placeholder='enter email'
           required
         />
-        <label>Password:</label>
+    
         <input
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+          placeholder='enter Password'
           required
         />
-        <label>Confirm Password:</label>
+      
         <input
           type="password"
           value={confirmPassword}
           onChange={(e) => setConfirmPassword(e.target.value)}
+          placeholder='enter password'
           required
         />
         <button type="submit">Sign Up</button>
