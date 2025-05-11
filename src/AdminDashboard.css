@@ -1,0 +1,186 @@
+.admin-dashboard {
+  width: 80%;
+  height: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #104981;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.admin-dashboard h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.app-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.app-table th,
+.app-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #ccc;
+  text-align: left;
+}
+
+.approve-btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 0.4rem 1rem;
+  border-radius: 5px;
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+
+.reject-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 0.4rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-content {
+  background: #054bb4;
+  border-radius: 16px;
+  padding: 2rem;
+  width: 650px;
+  max-width: 95%;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  animation: scaleUp 0.3s ease-in-out;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.modal-content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color:white;
+}
+
+.modal-content p {
+  margin: 0.5rem 0;
+  color:white;
+  font-size: 0.95rem;
+}
+
+.modal-content img {
+  margin-top: 0.5rem;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 150px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content a {
+  color: #570568;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.modal-content a:hover {
+  text-decoration: underline;
+}
+
+.close-btn {
+  background: #570568;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  margin-top: 1.5rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.close-btn:hover {
+  background: #450450;
+}
+
+.view-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.9rem;
+  margin-left: 0.4rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.view-btn:hover {
+  background: #0056b3;
+}
+
+/* Optional animations */
+@keyframes fadeIn {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.pickup-btn {
+  background: #28a745;
+  color: white;
+  border: none;
+  margin-top: 0.3rem;
+  margin-left: 0.5rem;
+  padding: 0.3rem 0.7rem;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+/* Style for the pickup slot button */
+.pickup-slot-btn {
+  background-color: #4caf50; /* Green background for active slot */
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+/* Hover effect for the pickup slot button */
+.pickup-slot-btn:hover {
+  background-color: #45a049; /* Darker green on hover */
+  transform: scale(1.05);
+}
+
+/* If the pickup slot is not assigned, use a grey background */
+.pickup-slot-btn:disabled {
+  background-color: #ccc; /* Grey background */
+  color: #666;
+  cursor: not-allowed;
+}
+
+/* Styling for better button positioning and readability */
+.pickup-slot-btn {
+  display: inline-block;
+  text-align: center;
+  font-weight: bold;
+}

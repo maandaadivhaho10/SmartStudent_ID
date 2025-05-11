@@ -12,9 +12,13 @@ function Login() {
     e.preventDefault();
     console.log('Logging in with:', email, password);
 
-    // Simulate successful login
-    if (email && password) {
+    // Default credentials
+    if (email === 'admin@smartid.com' && password === 'admin123') {
+      navigate('/admin');
+    } else if (email === 'student@smartid.com' && password === 'student123') {
       navigate('/dashboard');
+    } else {
+      alert('Invalid credentials');
     }
   };
 

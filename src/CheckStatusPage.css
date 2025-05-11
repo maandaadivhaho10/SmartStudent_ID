@@ -19,7 +19,8 @@ body {
     width: 100%;
     max-width: 700px;
     text-align: center;
-    min-height: 300px; /* You can adjust this value */
+    min-height: 150px; /* You can adjust this value */
+     background: #11024b !important;
   }
   
   
@@ -28,7 +29,7 @@ body {
     font-size: 1.5rem;
     color: #333;
   }
-  
+
   .input {
     width: 100%;
     padding: 0.75rem;
@@ -74,7 +75,7 @@ body {
   }
   
   .status.ready {
-    color: #1f11e4;
+    color: #11e42d;
   }
   
   .status.not-ready {

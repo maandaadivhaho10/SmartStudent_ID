@@ -4,6 +4,7 @@ import CheckStatusPage from './CheckStatusPage';
 import NotificationsPage from './NotificationsPage';
 import HelpPage from './HelpPage';
 import LogoutPage from './LogoutPage';
+import PickupPage from './PickupPage';
 import { Link } from 'react-router-dom';
 import './Dashboard.css';
 
@@ -25,7 +26,9 @@ const Dashboard = () => {
           <Link to="#" onClick={() => setActivePage('checkStatus')}>Check Status</Link>
           <Link to="#" onClick={() => setActivePage('notifications')}>Notifications</Link>
           <Link to="#" onClick={() => setActivePage('settings')}>Help & Support</Link>
+           <Link to="#" onClick={() => setActivePage('pickup')}>Schedule Pickup</Link>
           <Link to="#" onClick={() => setActivePage('logout')}>Log Out</Link>
+          
         </nav>
       </aside>
 
@@ -33,7 +36,7 @@ const Dashboard = () => {
         {activePage === 'home' && (
           <>
             <h1>Hello Maanda Adivhaho</h1>
-            <p>Welcome to the SmartStudentID. Use the menu to navigate.</p>
+            <p className='heading-p'>Welcome to the SmartStudentID. Use the menu to navigate.</p>
             <StudentIDForm />
           </>
         )}
@@ -41,6 +44,7 @@ const Dashboard = () => {
         {activePage === 'checkStatus' && <CheckStatusPage />}
         {activePage === 'notifications' && <NotificationsPage/> }
         {activePage === 'settings' && <HelpPage/>}
+         {activePage === 'pickup' && <PickupPage />}
         {activePage === 'logout' && <LogoutPage/>}
       </main>
     </div>
