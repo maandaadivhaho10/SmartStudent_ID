@@ -16,7 +16,7 @@ function PickupSlotModal({ onClose, onSave, appId }) {
 
   return (
     <div className="modal-overlay">
-      <div className="modal-content">
+      <div className="modal-content1">
         <h2 className='pickslot'>Assign Pickup Slot</h2>
         <label htmlFor="pickup-time">Pick a time:</label>
         <input

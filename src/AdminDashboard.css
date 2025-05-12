@@ -1,9 +1,17 @@
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  background-color: #104981;
+  padding: 0 1rem;
+}
 .admin-dashboard {
   width: 80%;
   height: 800px;
-  margin: 2rem auto;
+  margin: 3.5rem auto 0 auto;
   padding: 2rem;
-  background-color: #104981;
+  background-color: #104981 !important;
   border-radius: 12px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -51,14 +59,14 @@
   align-items: center;
   z-index: 999;
   animation: fadeIn 0.3s ease-in-out;
+
 }
 
 .modal-content {
-  background: #054bb4;
+  background: #054bb4 !important;
   border-radius: 16px;
   padding: 2rem;
-  width: 650px;
-  max-width: 95%;
+  width: 100%;
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
   animation: scaleUp 0.3s ease-in-out;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -173,8 +181,8 @@
 
 /* If the pickup slot is not assigned, use a grey background */
 .pickup-slot-btn:disabled {
-  background-color: #ccc; /* Grey background */
-  color: #666;
+  background-color: #db0808; /* Grey background */
+  color: #a70404;
   cursor: not-allowed;
 }
 
@@ -183,4 +191,27 @@
   display: inline-block;
   text-align: center;
   font-weight: bold;
+}
+
+
+.logout-btn {
+  display: flex;
+  align-items: center;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  gap: 0.5rem;
+}
+
+.logout-btn:hover {
+  background-color: #e60000;
+}
+
+.logout-icon {
+  font-size: 1.2rem;
 }

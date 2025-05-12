@@ -6,6 +6,8 @@ import HelpPage from './HelpPage';
 import LogoutPage from './LogoutPage';
 import PickupPage from './PickupPage';
 import { Link } from 'react-router-dom';
+import { MdDashboard, MdCheckCircle, MdNotifications, MdHelpOutline, MdEventAvailable } from 'react-icons/md';
+import { FiLogOut } from 'react-icons/fi';
 import './Dashboard.css';
 
 const Dashboard = () => {
@@ -22,13 +24,30 @@ const Dashboard = () => {
         <h2 className="sidebar-title">Menu</h2>
         <nav className="sidebar-nav">
           {/* Updated Link to navigate directly to home */}
-          <Link to="#" onClick={() => setActivePage('home')}>Dashboard</Link>
-          <Link to="#" onClick={() => setActivePage('checkStatus')}>Check Status</Link>
-          <Link to="#" onClick={() => setActivePage('notifications')}>Notifications</Link>
-          <Link to="#" onClick={() => setActivePage('settings')}>Help & Support</Link>
-           <Link to="#" onClick={() => setActivePage('pickup')}>Schedule Pickup</Link>
-          <Link to="#" onClick={() => setActivePage('logout')}>Log Out</Link>
-          
+          <Link to="#" onClick={() => setActivePage('home')}>
+            <MdDashboard className="nav-icon" />
+            Dashboard
+          </Link>
+          <Link to="#" onClick={() => setActivePage('checkStatus')}>
+            <MdCheckCircle className="nav-icon" />
+            Check Status
+          </Link>
+          <Link to="#" onClick={() => setActivePage('notifications')}>
+            <MdNotifications className="nav-icon" />
+            Notifications
+          </Link>
+          <Link to="#" onClick={() => setActivePage('settings')}>
+            <MdHelpOutline className="nav-icon" />
+            Help & Support
+          </Link>
+          <Link to="#" onClick={() => setActivePage('pickup')}>
+            <MdEventAvailable className="nav-icon" />
+            Schedule Pickup
+          </Link>
+          <Link to="#" onClick={() => setActivePage('logout')}>
+            <FiLogOut className="nav-icon" />
+            Log Out
+          </Link>
         </nav>
       </aside>
 

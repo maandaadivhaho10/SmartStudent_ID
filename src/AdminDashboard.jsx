@@ -1,5 +1,7 @@
 // src/AdminDashboard.jsx
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { FiLogOut } from 'react-icons/fi';
 import './AdminDashboard.css';
 import PickupSlotModal from './PickupSlotModal'; // Import the PickupSlotModal
 
@@ -54,11 +56,27 @@ function AdminDashboard() {
   const closeModal = () => {
     setIsModalOpen(false); // Close the modal
   };
+  const navigate = useNavigate();
+
+const handleLogout = () => {
+  // Clear auth data
+ 
+  // Redirect to login page
+  navigate('/'); // adjust path if different
+};
 
   return (
+    <>
+
     <div className="admin-dashboard">
+      <div className="dashboard-header">
+      <button className="logout-btn"  onClick={handleLogout}>
+        <FiLogOut className="logout-icon" />
+        Logout
+      </button>
+    </div>
       <h1>Admin Dashboard</h1>
-      <h3>Pending Student ID Applications</h3>
+      <h3>Pending Student Card Applications</h3>
 
       {applications.filter(app => app.status === 'pending').length === 0 ? (
         <p>No pending applications.</p>
@@ -98,11 +116,10 @@ function AdminDashboard() {
           )}
         </td>
         <td>
-          <button className="pickup-slot-btn">
            <button className="pickup-slot-btn">
   {pickupSlot[app.id] ? `${pickupSlot[app.id]}` : 'Assign Pickup Slot'}
 </button>
-          </button>
+    
         </td>
       </tr>
     ))}
@@ -144,6 +161,7 @@ function AdminDashboard() {
         />
       )}
     </div>
+    </>
   );
 }
 

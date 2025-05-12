@@ -40,18 +40,26 @@
     margin-bottom: 20px;
   }
   
-  .sidebar-nav a {
-    display: block;
-    padding: 12px 0;
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    transition: background 0.3s;
-  }
-  
-  .sidebar-nav a:hover {
-    background-color: #080808;
-  }
+.sidebar-nav a {
+  display: flex;
+  align-items: center;
+  padding: 12px 0;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background 0.3s;
+  gap: 0.6rem;
+}
+
+.sidebar-nav a:hover {
+  background-color: #080808;
+}
+
+.nav-icon {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+  color: #ccc;
+}
   
   .dashboard-main {
     margin-left: 0;

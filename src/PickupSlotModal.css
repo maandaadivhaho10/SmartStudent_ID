@@ -12,8 +12,8 @@
   z-index: 1000;
 }
 
-.modal-content {
-  background: white;
+.modal-content1 {
+  background: rgb(26, 9, 182);
   padding: 2rem;
   border-radius: 12px;
   text-align: center;
@@ -53,10 +53,13 @@ input {
 }
 
 .close-btn {
-  background-color: #ccc;
+  background-color: #a51313;
   color: black;
 }
 
 .close-btn:hover {
-  background-color: #999;
+  background-color: #361414;
+}
+.pickslot{
+  color: black !important;
 }
