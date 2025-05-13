@@ -66,7 +66,7 @@ const handleLogout = () => {
 };
 
   return (
-    <>
+    <div className='outerbox'>
 
     <div className="admin-dashboard">
       <div className="dashboard-header">
@@ -161,7 +161,7 @@ const handleLogout = () => {
         />
       )}
     </div>
-    </>
+    </div>
   );
 }
 
